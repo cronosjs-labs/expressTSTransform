@@ -1,6 +1,6 @@
 {
   "name": "express-ts-transform",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "author": "Erick Medel",
   "scripts": {
@@ -24,9 +24,7 @@
     "typescript": "^5.3.3"
   },
   "files": [
-    "lib/main.d.ts",
-    "lib/main.js",
-    "lib/main.js.map"
+    "lib/*"
   ],
   "main": "./lib/main.umd.js",
   "module": "./lib/main.js",
