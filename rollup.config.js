@@ -1,4 +1,3 @@
-// Contents of the file /rollup.config.js
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 
@@ -8,6 +7,15 @@ const config = [
     output: {
       file: "lib/main.js",
       format: "es",
+      sourcemap: true,
+    },
+    plugins: [typescript()],
+  },
+  {
+    input: "build/compiled/main.js",
+    output: {
+      file: "lib/main.umd.js",
+      format: "umd",
       sourcemap: true,
     },
     plugins: [typescript()],

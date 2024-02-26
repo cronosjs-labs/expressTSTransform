@@ -1,12 +1,18 @@
 {
   "name": "express-ts-transform",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "author": "Erick Medel",
   "scripts": {
     "_tsc": "tsc",
-    "_bundle": "rollup --config",
+    "_bundle": "rollup --config --format=iife",
     "build": "turbo _tsc _bundle"
+  },
+  "exports": {
+    ".": {
+      "import": "./lib/main.js",
+      "require": "./lib/main.umd.js"
+    }
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.6",
@@ -14,13 +20,15 @@
     "rollup": "^4.12.0",
     "rollup-plugin-dts": "^6.1.0",
     "tslib": "^2.6.2",
-    "turbo": "^1.12.4"
+    "turbo": "^1.12.4",
+    "typescript": "^5.3.3"
   },
   "files": [
     "lib/main.d.ts",
     "lib/main.js",
     "lib/main.js.map"
   ],
-  "main": "lib/main.js",
+  "main": "./lib/main.umd.js",
+  "module": "./lib/main.js",
   "types": "lib/main.d.ts"
 }

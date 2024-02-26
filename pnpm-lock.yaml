@@ -23,6 +23,9 @@ devDependencies:
   turbo:
     specifier: ^1.12.4
     version: 1.12.4
+  typescript:
+    specifier: ^5.3.3
+    version: 5.3.3
 
 packages:
 
