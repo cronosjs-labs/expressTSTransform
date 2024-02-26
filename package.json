@@ -1,7 +1,6 @@
 {
   "name": "express-ts-transform",
-  "version": "0.0.3",
-  "type": "module",
+  "version": "0.0.4",
   "author": "Erick Medel",
   "scripts": {
     "_tsc": "tsc",
