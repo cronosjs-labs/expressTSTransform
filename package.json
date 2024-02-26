@@ -9,8 +9,8 @@
   },
   "exports": {
     ".": {
-      "import": "./lib/main.js",
-      "require": "./lib/main.umd.js"
+      "import": "./lib/main.esm.js",
+      "require": "./lib/main.cjs.js"
     }
   },
   "devDependencies": {
@@ -25,7 +25,7 @@
   "files": [
     "lib/*"
   ],
-  "main": "./lib/main.umd.js",
-  "module": "./lib/main.js",
+  "main": "./lib/main.cjs.js",
+  "module": "./lib/main.esm.js",
   "types": "lib/main.d.ts"
 }

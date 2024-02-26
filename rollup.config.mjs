@@ -5,7 +5,7 @@ const config = [
   {
     input: "build/compiled/main.js",
     output: {
-      file: "lib/main.js",
+      file: "lib/main.esm.js",
       format: "es",
       sourcemap: true,
     },
@@ -14,8 +14,8 @@ const config = [
   {
     input: "build/compiled/main.js",
     output: {
-      file: "lib/main.umd.js",
-      format: "umd",
+      file: "lib/main.cjs.js",
+      format: "cjs",
       sourcemap: true,
     },
     plugins: [typescript()],
