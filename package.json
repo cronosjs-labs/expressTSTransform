@@ -1,12 +1,15 @@
 {
   "name": "express-ts-transform",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "Erick Medel",
   "scripts": {
     "_tsc": "tsc",
     "_bundle": "rollup -c",
     "build": "turbo _tsc _bundle --concurrency=1"
   },
+  "main": "./lib/main.cjs.js",
+  "module": "./lib/main.esm.js",
+  "types": "lib/build/compiled/main.d.ts",
   "exports": {
     ".": {
       "import": "./lib/main.esm.js",
@@ -25,8 +28,5 @@
   },
   "files": [
     "lib/*"
-  ],
-  "main": "./lib/main.cjs.js",
-  "module": "./lib/main.esm.js",
-  "types": "lib/main.d.ts"
+  ]
 }
