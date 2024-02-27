@@ -1,5 +1,5 @@
 import typescript from "@rollup/plugin-typescript";
-import dts from "rollup-plugin-dts";
+import terser from "@rollup/plugin-terser";
 
 const config = [
   {
@@ -8,8 +8,9 @@ const config = [
       file: "lib/main.esm.js",
       format: "es",
       sourcemap: true,
+      exports: "auto",
     },
-    plugins: [typescript()],
+    plugins: [typescript(), terser()],
   },
   {
     input: "build/compiled/main.js",
@@ -17,16 +18,9 @@ const config = [
       file: "lib/main.cjs.js",
       format: "cjs",
       sourcemap: true,
+      exports: "auto",
     },
-    plugins: [typescript()],
-  },
-  {
-    input: "build/compiled/main.d.ts",
-    output: {
-      file: "lib/main.d.ts",
-      format: "es",
-    },
-    plugins: [dts()],
+    plugins: [typescript(), terser()],
   },
 ];
 

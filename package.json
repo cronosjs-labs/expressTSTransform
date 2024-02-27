@@ -4,8 +4,8 @@
   "author": "Erick Medel",
   "scripts": {
     "_tsc": "tsc",
-    "_bundle": "rollup --config --format=iife",
-    "build": "turbo _tsc _bundle"
+    "_bundle": "rollup -c",
+    "build": "turbo _tsc _bundle --concurrency=1"
   },
   "exports": {
     ".": {
@@ -14,6 +14,7 @@
     }
   },
   "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/node": "^20.11.19",
     "rollup": "^4.12.0",
