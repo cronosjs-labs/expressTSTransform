@@ -7,7 +7,7 @@ const config = [
     output: {
       file: "lib/main.esm.js",
       format: "es",
-      sourcemap: true,
+      sourcemap: false,
       exports: "auto",
     },
     plugins: [typescript(), terser()],
@@ -17,7 +17,7 @@ const config = [
     output: {
       file: "lib/main.cjs.js",
       format: "cjs",
-      sourcemap: true,
+      sourcemap: false,
       exports: "auto",
     },
     plugins: [typescript(), terser()],
