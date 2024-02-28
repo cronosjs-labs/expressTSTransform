@@ -59,8 +59,6 @@ const expressTSTransform = (data: Data) => {
 
   let targetDir = process.cwd();
 
-  targetDir = path.join(targetDir, "src");
-
   let files = fs.readdirSync(targetDir);
 
   let folders = files.filter((file: string) => {
