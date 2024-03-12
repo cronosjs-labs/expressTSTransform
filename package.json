@@ -1,6 +1,6 @@
 {
   "name": "express-ts-transform",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": "Erick Medel",
   "scripts": {
     "_tsc": "tsc",

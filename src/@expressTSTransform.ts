@@ -181,11 +181,9 @@ const expressTSTransform = (data: Data) => {
     files.forEach((file: string) => {
       const filePath = path.join(targetDir, folder, file);
       const data = fs.readFileSync(filePath, "utf8");
-      const regex = /async \(req, res\)/g;
-      const newData = data.replace(
-        regex,
-        "async (req: Request, res: Response)"
-      );
+
+      const regex = /(req, res)/g;
+      let newData = data.replace(regex, "(req: Request, res: Response)");
 
       const importStatement = `import { Request, Response } from 'express';\n`;
       if (regex.test(data)) {
