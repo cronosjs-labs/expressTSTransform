@@ -1,3 +1,3 @@
-import { expressTSTransform } from "./@expressTSTransform";
+import { expressTSTransform } from "./expressTSTransform";
 
 export { expressTSTransform };
