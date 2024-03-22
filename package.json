@@ -3,9 +3,8 @@
   "version": "0.0.10",
   "author": "Erick Medel",
   "scripts": {
-    "_tsc": "tsc",
     "_bundle": "rollup -c",
-    "build": "turbo _tsc _bundle --concurrency=1"
+    "build": "turbo _bundle"
   },
   "main": "./lib/main.cjs.js",
   "module": "./lib/main.esm.js",
