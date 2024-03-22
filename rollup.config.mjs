@@ -3,7 +3,7 @@ import terser from "@rollup/plugin-terser";
 
 const config = [
   {
-    input: "build/compiled/main.js",
+    input: "src/main.ts",
     output: {
       file: "lib/main.esm.js",
       format: "es",
@@ -13,7 +13,7 @@ const config = [
     plugins: [typescript(), terser()],
   },
   {
-    input: "build/compiled/main.js",
+    input: "src/main.ts",
     output: {
       file: "lib/main.cjs.js",
       format: "cjs",
